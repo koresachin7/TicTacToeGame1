@@ -12,6 +12,25 @@ public class TicTacToeGame {
         System.out.println("Select the Letter you wanted \n  Press 1 . Choose X \n  Press 2 . Choose O\n\nEnter your Choice : ");
         Scanner scan =new Scanner(System.in); //Create scanner object
         int choice = scan.nextInt();
+
+//        TicTacToeGame.showBoard();
+        TicTacToeGame.allowPlayer(choice);
+        scan.close();
+    }
+
+    /*Method use:
+     *in method data is character
+     *and using for loop to iteration from 1 to 9
+
+     */
+    public static void createBoard() {
+        for (int index = 1; index < board.length; index++) {
+            board[index] = ' ';
+        }
+
+
+    }
+    public  static void allowPlayer( int choice){
         switch(choice){
             case 1 : {
                 playerSymbol='X';
@@ -28,26 +47,12 @@ public class TicTacToeGame {
                 return;
             }
         }
-        TicTacToeGame.showBoard();
     }
-
-    /*Method use:
-     *in method data is character
-     *and using for loop to iteration from 1 to 9
-
-     */
-    public static char[] createBoard() {
-        for (int index = 1; index < board.length; index++) {
-            board[index] = ' ';
-        }
-        return board;
-
-    }
-    public  static void showBoard() {
-        System.out.println("Board Display\n");
-        System.out.println(" | "+board[1]+" "+board[2]+" "+board[3]+" |\n");
-        System.out.println(" | "+board[4]+" "+board[5]+" "+board[6]+" |\n");
-        System.out.println(" | "+board[7]+" "+board[8]+" "+board[9]+" |\n");
-    }
+//    public  static void showBoard() {
+//        System.out.println("Board Display\n");
+//        System.out.println(" | "+board[1]+" "+board[2]+" "+board[3]+" |\n");
+//        System.out.println(" | "+board[4]+" "+board[5]+" "+board[6]+" |\n");
+//        System.out.println(" | "+board[7]+" "+board[8]+" "+board[9]+" |\n");
+//    }
 
 }
