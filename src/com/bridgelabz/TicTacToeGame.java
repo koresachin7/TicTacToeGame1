@@ -1,10 +1,34 @@
 package com.bridgelabz;
 
+import java.util.Scanner;
+
 public class TicTacToeGame {
+    public static char playerSymbol;
+    public static char cpSymbol;
     static char[] board = new char[10]; // board size 10
 
     public static void main(String[] args) {
         createBoard();//calling method
+        System.out.println("Select the Letter you wanted \n  Press 1 . Choose X \n  Press 2 . Choose O\n\nEnter your Choice : ");
+        Scanner scan =new Scanner(System.in); //Create scanner object
+        int choice = scan.nextInt();
+        switch(choice){
+            case 1 : {
+                playerSymbol='X';
+                cpSymbol='O';
+                break;
+            }
+            case 2 :{
+                playerSymbol='O';
+                cpSymbol='X';
+                break;
+            }
+            default: {
+                System.out.println("Invalid Choice . Retry Again!");
+                return;
+            }
+        }
+        TicTacToeGame.showBoard();
     }
 
     /*Method use:
@@ -19,4 +43,11 @@ public class TicTacToeGame {
         return board;
 
     }
+    public  static void showBoard() {
+        System.out.println("Board Display\n");
+        System.out.println(" | "+board[1]+" "+board[2]+" "+board[3]+" |\n");
+        System.out.println(" | "+board[4]+" "+board[5]+" "+board[6]+" |\n");
+        System.out.println(" | "+board[7]+" "+board[8]+" "+board[9]+" |\n");
+    }
+
 }
