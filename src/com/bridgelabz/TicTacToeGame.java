@@ -13,7 +13,7 @@ public class TicTacToeGame {
         Scanner scan =new Scanner(System.in); //Create scanner object
         int choice = scan.nextInt();
 
-//        TicTacToeGame.showBoard();
+        TicTacToeGame.showBoard();
         TicTacToeGame.allowPlayer(choice);
         scan.close();
     }
@@ -48,11 +48,11 @@ public class TicTacToeGame {
             }
         }
     }
-//    public  static void showBoard() {
-//        System.out.println("Board Display\n");
-//        System.out.println(" | "+board[1]+" "+board[2]+" "+board[3]+" |\n");
-//        System.out.println(" | "+board[4]+" "+board[5]+" "+board[6]+" |\n");
-//        System.out.println(" | "+board[7]+" "+board[8]+" "+board[9]+" |\n");
-//    }
+    public  static void showBoard() {
+        System.out.println("Board Display\n");
+        System.out.println(" | "+board[1]+" | "+board[2]+" | "+board[3]+" |\n");
+        System.out.println(" | "+board[4]+" | "+board[5]+" | "+board[6]+" |\n");
+        System.out.println(" | "+board[7]+" | "+board[8]+" | "+board[9]+" |\n");
+    }
 
 }
